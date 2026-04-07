@@ -1,0 +1,7 @@
+{
+    "id": "abc",
+    "birthday": "2012-08-15",
+    "favorite-categories": [1, 7, 8, 10],
+    "favorite-categories1": [1, 7, 8, 10],
+    "favorite-categories2": [3, 5, 7, 12]
+}
