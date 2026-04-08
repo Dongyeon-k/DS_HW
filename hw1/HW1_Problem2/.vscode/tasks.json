@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "\"C:\\msys64\\mingw64\\bin\\g++.exe\" -c main.cpp -o main.o -std=c++20 && \"C:\\msys64\\mingw64\\bin\\g++.exe\" -c functions.cpp -o functions.o -std=c++20 && \"C:\\msys64\\mingw64\\bin\\g++.exe\" -c jsoncpp.cpp -o jsoncpp.o -std=c++20 && \"C:\\msys64\\mingw64\\bin\\g++.exe\" main.o functions.o jsoncpp.o -o main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build all source files for HW1 Problem2."
+        }
+    ]
+}

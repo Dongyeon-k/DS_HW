@@ -7,25 +7,6 @@
 
 #include "functions.hpp"
 
-void print_header_cols(std::map<int, std::string>& header_cols){
-    for (auto x: header_cols){
-        std::cout << x.first << " : " << x.second << std::endl;
-    }
-}
-std::string print_vector(std::vector<std::string> vec){
-    std:: cout << "{";
-    for (auto v : vec){
-        std:: cout << v << ", ";
-    }
-    std:: cout << "}";
-    return "";
-}
-void print_data_map(std::map<std::string, std::vector<std::string>>& data_map){
-    for (auto x: data_map){
-        std::cout << x.first << " : "  << print_vector(x.second) << std::endl;
-    }
-}
-
 int main(int argc, char* argv[]) {
     // argv[1]: Subproblem no.
     // argv[2]: CSV file name
@@ -39,9 +20,6 @@ int main(int argc, char* argv[]) {
 
     ParseCSV(filename, header_cols, data_map);
 
-    print_header_cols(header_cols);
-    print_data_map(data_map);
-    std::cout << std::endl<< std::endl;
 
     if (prob_no == "a") {
         if (argc != 3) {
