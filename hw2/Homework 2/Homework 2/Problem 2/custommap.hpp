@@ -25,6 +25,10 @@ class TreeNode {
 
         TreeNode<K, V>* getRight() const { return right; }
         void setRight(TreeNode<K, V>* newRight) { right = newRight; }
+
+        V& getValueAddress(){
+            return value;
+        }
 };
 
 
@@ -135,7 +139,7 @@ class CustomMap {
                 node = findNode(root, key);
             }
 
-            return *(new V(node->getValue())); // <- 이건 잘못된 방식
+            return node->getValueAddress();
         }
 
 };
