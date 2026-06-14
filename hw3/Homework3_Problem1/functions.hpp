@@ -1,15 +1,17 @@
-class Node {
-   public:
+class Node
+{
+public:
     int val;
-    Node* left = nullptr;
-    Node* right = nullptr;
-    Node* parent = nullptr;
+    Node *left = nullptr;
+    Node *right = nullptr;
+    Node *parent = nullptr;
 
     Node(int val) : val(val) {}
 };
 
-class MaxHeap {
-   public:
+class MaxHeap
+{
+public:
     void enqueue(int val);
     void dequeue();
 
@@ -18,8 +20,8 @@ class MaxHeap {
 
     void print(); /* not graded */
 
-   private:
-    Node* root = nullptr;
-    Node* last = nullptr;
+private:
+    Node *root = nullptr;
+    Node *last = nullptr;
     int size_ = 0;
 };
